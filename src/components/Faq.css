@@ -1,0 +1,22 @@
+.faq-question {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question.active {
+  background-color: #e2e6ea;
+}
+
+.faq-answer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.faq-answer  {
+  margin: 0;
+  text-align: left;
+}

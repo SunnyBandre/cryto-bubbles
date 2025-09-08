@@ -1,0 +1,47 @@
+.title-area-center {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+  transform: translate(-50%, -25%);
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1; 
+  color: white; 
+  text-align: center;
+  padding: 0;
+}
+
+.pta-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-overlay  h1, .content-overlay  p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 767px) {
+  .title-area-center.video {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-area-center  .pta-width{
+    width: 100%;
+  }
+}

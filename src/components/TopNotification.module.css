@@ -1,0 +1,47 @@
+.riskWarning {
+  background: #fff;
+  color: #707679;
+  padding: .5rem 0;
+  box-shadow: 0 0 16px 0 rgba(223, 230, 233, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message{
+  text-align: center;
+  margin: 0 .25rem;
+  font-size: .5rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+}
+.riskWarning strong{
+  color: #393939;
+  font-size: .563rem;
+}
+.clearTop{
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .message{
+    font-size: .75rem;
+  }
+  .riskWarning {
+    min-height: 2rem;
+    height: 2rem;
+    overflow: hidden;
+  }
+  .riskWarning strong{
+    font-size: .875rem;
+  }
+  .clearTop{
+    margin-top: 2rem;
+  }
+}

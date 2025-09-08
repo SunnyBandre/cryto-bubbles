@@ -1,0 +1,71 @@
+.contact-details {
+  margin: 5rem 0 4rem;
+}
+.cf-bg {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+}
+.contact-details h3 {
+  text-align: center;
+  padding: 2rem;
+}
+.contact-details p {
+  margin: 0;
+}
+.contact-row{
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+.contact-form form {
+  background: #fff;
+  padding: 2rem 1rem;
+  margin: 3rem 0;
+  border-radius: 1.563rem;
+}
+.contact-form .btn {
+  padding: 0.75rem 3rem;
+  margin-top: 1rem;
+}
+.card-cd {
+  text-align: center;
+  padding: 2rem 1rem;
+
+}
+.card-cd h5 {
+  margin-bottom: 1rem;
+  color: #000;
+}
+.card-cd svg {
+  width: 1.25rem;
+  fill: #5d5d5d;
+}
+.card-cd.border-r {
+  border-right: 1px solid #ccc;
+}
+.contact-img-bg {
+  display: flex;
+  background: #cdedff;
+  align-items: end;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding: 0;
+}
+.contact-form input{
+    padding: .75rem 1rem;
+    margin-bottom: .5rem;
+}
+.cf-title {
+  font-size: 2rem;
+}
+.contact-icon {
+  width: 3rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 767px) {
+  .contact-form form {
+    padding: 2rem 4rem;
+    
+  }
+}

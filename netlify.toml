@@ -1,0 +1,5 @@
+[build]
+  functions = "netlify/functions"
+
+[functions."fetch-news"]
+  schedule = "0 0 * * *" # Runs every day at midnight (UTC)

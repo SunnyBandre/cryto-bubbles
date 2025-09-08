@@ -1,0 +1,52 @@
+.why-trade {
+  background: #fff;
+  display: flex;
+}
+
+.why-trade-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+.why-trade .wt-top-title {
+  margin: 0;
+  padding: 5rem 0 3rem;
+}
+.why-trade-grid .card {
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: left;
+  border-left: 3px solid var(--primary-color);
+  justify-content: center;
+}
+.wt-cta1 {
+  margin: 5rem 0;
+  padding: 2rem 0;
+  background: #000;
+  border-radius: 2rem;
+}
+.wt-cta1 h2 {
+  font-size: 2rem;
+  color: #fff;
+  
+}
+.wt-cta1 .btn-one{
+  margin: 1rem;
+}
+@media screen and (min-width: 767px) {
+  .why-trade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+  .why-trade-grid .card {
+    margin: 0;
+  }
+  .why-trade .wt-top-title {
+    margin: 0;
+    padding: 6rem 0 5rem;
+  }
+}
