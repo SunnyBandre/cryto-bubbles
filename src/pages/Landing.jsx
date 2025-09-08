@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import CryptoBubbles from "../pages/CryptoBubbles";
 import axios from "axios";
@@ -379,7 +379,6 @@ function Landing() {
 
       <div className="max-h-screen bg-[#0A0F2C] overflow-hidden">
         <div className="relative" style={{ height: `calc(95vh - ${10}px)` }}>
-          {" "}
           <CryptoBubbles
             key={`${windowSize.width}-${windowSize.height}-${headerHeight}`} // Force re-render on dimension changes
             height={windowSize.height - 50}
@@ -392,7 +391,6 @@ function Landing() {
           />
           {loading && <BubbleLoader />}
         </div>
-        {/* )} */}
       </div>
     </div>
   );

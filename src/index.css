@@ -21,40 +21,6 @@ body {
   font-family: roboto, sans-serif;
   color: #3c3c3c;
 }
-/* 
-@font-face {
-  font-family: "MontBlack";
-  src: url("/fonts/mont-black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "montbold";
-  src: url("/fonts/mont-bold.woff2") format("woff2");
-  font-style: normal;
-}
-h1,
-h2,
-h3 {
-  font-family: montbold, sans-serif;
-  color: #000;
-  line-height: 1.5;
-}
-a {
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-} */
-
-/* section h2 {
-  font-size: 1.375rem;
-  line-height: 1.75rem;
-}
-section p {
-  font-size: 1rem;
-  line-height: 1.75rem;
-} */
 .sp-5 {
   padding: 5rem 0 0;
 }
@@ -71,8 +37,6 @@ section p {
   z-index: 9999;
 }
 
-.main-header {
-}
 /* .main-header {
   position: absolute;
   top: 0;

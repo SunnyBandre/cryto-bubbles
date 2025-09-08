@@ -1,8 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Footer } from "../components/Footer";
 import PriceTicker from "../components/PriceTicker";
-import CookieBanner from "../components/CookieBanner";
-import WhatsAppButton from "../components/WhatsAppButton";
 
 function Root() {
   return (
