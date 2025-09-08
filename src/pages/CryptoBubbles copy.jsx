@@ -256,20 +256,20 @@ const CryptoBubbles = ({
     let baseMaxRadius = 100;
 
     if (currentWidth <= 600) {
-      baseMinRadius = 7;
-      baseMaxRadius = 30;
-    } else if (currentWidth <= 1024) {
       baseMinRadius = 10;
-      baseMaxRadius = 50;
+      baseMaxRadius = 40;
+    } else if (currentWidth <= 1024) {
+      baseMinRadius = 15;
+      baseMaxRadius = 70;
     } else if (currentWidth <= 1536) {
-      baseMinRadius = 20;
-      baseMaxRadius = 60;
-    } else if (currentWidth <= 1920) {
       baseMinRadius = 25;
-      baseMaxRadius = 100;
-    } else {
-      baseMinRadius = 30;
+      baseMaxRadius = 90;
+    } else if (currentWidth <= 1920) {
+      baseMinRadius = 35;
       baseMaxRadius = 120;
+    } else {
+      baseMinRadius = 50;
+      baseMaxRadius = 150;
     }
 
     // 2. Calculate price changes
@@ -786,7 +786,7 @@ const CryptoBubbles = ({
                 </p>
               </div>
               <SparklineChart
-                data={currentCoin.sparkline}
+                data={sparklineData}
                 color={currentCoin.price_change >= 0 ? "#00FF00" : "#FF4444"}
               />
               <div className="flex gap-5 text-sm">
