@@ -324,9 +324,19 @@ function Landing() {
 
         const newData = await Promise.all(
           symbols.map(async (symbol) => {
-            const response = await axios.get(
-              `/api/chart/${encodeURIComponent(symbol)}`
-            );
+            // const response = await axios.get(
+            //   `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(
+            //     symbol
+            //   )}`
+            // );
+            // const response = await axios.get(`/api/yahoo/symbol=${encodeURIComponent(symbol)}`);
+            const url =
+              import.meta.env.MODE === "development"
+                ? `/api/yahoo/${encodeURIComponent(symbol)}`
+                : `/api/yahoo?symbol=${encodeURIComponent(symbol)}`;
+
+            const response = await axios.get(url);
+
             const meta = response.data.chart?.result?.[0]?.meta;
 
             return {

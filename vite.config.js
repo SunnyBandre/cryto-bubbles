@@ -11,6 +11,12 @@ export default defineConfig({
         ws: true, // This option is for enabling WebSocket proxying
         changeOrigin: true, // Change origin for CORS
       },
+      "/api/yahoo": {
+        target: "https://query1.finance.yahoo.com",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api\/yahoo/, "/v8/finance/chart"),
+      },
     },
     open: true,
     port: 5173,
