@@ -322,7 +322,7 @@ function Landing() {
         //   "https://fastone-market-data-storage.s3.eu-north-1.amazonaws.com/market-data.json";
         // const response = await axios.get(url);
 
-        const response = await Promise.all(
+        const newData = await Promise.all(
           symbols.map(async (symbol) => {
             const response = await axios.get(
               `/api/chart/${encodeURIComponent(symbol)}`
@@ -342,8 +342,8 @@ function Landing() {
           })
         );
 
-        const newData = response.data;
-        console.log("response", response);
+        // const newData = response.data;
+        console.log("response", newData);
 
         // Create a Map of current data by id for quick lookup
         const currentPositionsMap = new Map();
@@ -357,8 +357,8 @@ function Landing() {
           // Clean up name for image
 
           const symbolName =
-            cleanName(symbol.meta.longName)?.split(" ")[0] ||
-            cleanName(symbol.meta.shortName)?.split(" ")[0] ||
+            cleanName(symbol?.meta?.longName)?.split(" ")[0] ||
+            cleanName(symbol?.meta?.shortName)?.split(" ")[0] ||
             symbol.symbol;
 
           // Find existing positions, if any
@@ -372,18 +372,18 @@ function Landing() {
             id: symbol.id,
             symbol: symbolName,
             name: symbol.name,
-            fullName: symbol.meta.longName || symbol.meta.shortName,
-            price: symbol.price,
+            fullName: symbol?.meta?.longName || symbol?.meta?.shortName,
+            price: symbol?.price,
             image: `./images/symbols/${symbolName.replace(/\//g, "")}.png`,
             price_change: calculatePercentageDifference(
-              symbol.meta.previousClose,
-              symbol.price
+              symbol?.meta?.previousClose,
+              symbol?.price
             ),
-            volume: symbol.meta.regularMarketVolume,
+            volume: symbol?.meta?.regularMarketVolume,
             timestamps,
             closes,
-            dayLow: symbol.meta.regularMarketDayLow,
-            dayHigh: symbol.meta.regularMarketDayHigh,
+            dayLow: symbol?.meta?.regularMarketDayLow,
+            dayHigh: symbol?.meta?.regularMarketDayHigh,
             x: existing?.x ?? Math.random() * window.innerWidth,
             y: existing?.y ?? Math.random() * window.innerHeight,
             vx: existing?.vx ?? 0,
@@ -410,7 +410,7 @@ function Landing() {
         });
         positionsRef.current = updatedPositionsMap;
 
-        console.log("Updated data:", response);
+        console.log("Updated data:", newData);
       } catch (error) {
         console.error("Error fetching market data:", error);
       } finally {
